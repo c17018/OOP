@@ -1,36 +1,50 @@
-class TextFileReader
+class TextFileReader extends TextReader
 {
+    // オープンするファイルのファイルパス
+    private String filePath;
+
     // アクセス中のファイロ番号を格納する変数
     private int fileNo;
 
-    // setter
-    int setFileNo(int fileNo)
+    // コンストラクタ
+    public TextFileReader(String filePath)
     {
-        this.fileNo = fileNo;
-    }
-    
-    // getter
-    int getFileNo()
-    {
-        return fileNo;
+        super();
+        this.filePath = filePath;
     }
 
+    // // setter
+    // int setFileNo(int fileNo)
+    // {
+    //     this.fileNo = fileNo;
+    //     return fileNo;
+    // }
+    
+    // // getter
+    // int getFileNo()
+    // {
+    //     return fileNo;
+    // }
+
     // ファイルを開く
-    void open (String pathName)
+    @Override
+    public void open()
     {
         fileNo = 100; // ファイルを開いてファイル番号を取得
-        System.out.println(pathName + "ファイルを開いて" + fileNo + "を取得");
+        System.out.println(filePath + "ファイルを開いて" + fileNo + "を取得");
     }
 
     // データを読み込む
-    char read()
+    @Override
+    public char read()
     {
         System.out.println(fileNo + "からデータを読み込む");
         return 'a';
     }
 
     // ファイルを閉じる
-    char close()
+    @Override
+    public char close()
     {
         System.out.println(fileNo + "ファイルを閉じた");
         return 0;

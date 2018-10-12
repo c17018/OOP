@@ -5,19 +5,20 @@ public class Main
         // // start
         // System.out.println("Hello World!");
         // TextFileReaderのインスタンスを作る
-        TextFileReader rd1 = new TextFileReader();
+        TextReader rd1 = new TextFileReader("var/tmp/data.dat");
+        TextReader nd1 = new NetworkReader();
 
         // ファイルを開く
-        rd1.open("var/tmp/data.dat");
-        System.out.println("ファイル番号:" + rd1.getFileNo());
-        rd1.setFileNo(200);
+        rd1.open();
+        //System.out.println("ファイル番号:" + rd1.getFileNo());
         // rd1.fileNo = 200; // バグ
+        // rd1.setFileNo(200);
         
         // データを読み込む
-        char data = rd1.read();
+        char data1 = rd1.read();
         
         // データを処理する
-        System.out.println(data + "を処理");
+        System.out.println(data1 + "を処理");
 
         // 結果を出力する
         System.out.println("結果を出力");
