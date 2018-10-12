@@ -1,3 +1,5 @@
+package io;
+
 abstract public class TextReader
 {
     // オープン

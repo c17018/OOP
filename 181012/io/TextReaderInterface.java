@@ -1,3 +1,5 @@
+package io;
+
 interface TextReaderInterface
 {
     // オープン

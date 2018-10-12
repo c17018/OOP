@@ -1,3 +1,5 @@
+package io;
+
 public class TextFileReader extends TextReader
 {
     // オープンするファイルのファイルパス
