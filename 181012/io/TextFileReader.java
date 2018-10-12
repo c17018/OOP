@@ -1,4 +1,4 @@
-class TextFileReader extends TextReader
+public class TextFileReader extends TextReader
 {
     // オープンするファイルのファイルパス
     private String filePath;
