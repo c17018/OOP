@@ -7,13 +7,14 @@ public class Main {
 
     public static void main(String[] args) {
         Factory factory = new IDCardFactory();
-        Product card1 = factory.create("1", "山内公之");
-        Product card2 = factory.create("2", "山田花子");
-        Product card3 = factory.create("3", "山本太郎");
+        Product card1 = factory.create("山内公之", 777);
+        Product card2 = factory.create("山田花子", 666);
+        Product card3 = factory.create("山本太郎", 7);
         card1.use();
         card2.use();
         card3.use();
         System.out.println(((IDCardFactory) factory).getOwners());
+        System.out.println(((IDCardFactory) factory).getNos());
     }
 }
 
